@@ -5,8 +5,33 @@ console.log('test')
 const nav = document.querySelector('nav')
 function mouseOver(event) {
     event.target.style.color = '#C6DEA6'
+    event.target.style.transition = '0.5s'
 }
 nav.addEventListener('mouseover', mouseOver)
+
+// mouseout Listener
+const mouseout = document.querySelector('nav')
+function mouseOut(event) {
+    event.target.style.color = 'purple'
+    event.target.style.transition = '0.5s'
+}
+mouseout.addEventListener('mouseout', mouseOut)
+
+// mouseenter Listener
+const mouseenter = document.querySelector('footer')
+function footBG(event) {
+    event.target.style.background = 'purple'
+    event.target.style.transition = '0.5s'
+}
+mouseenter.addEventListener('mouseenter', footBG)
+
+// mouseleave Listener
+const mouseleave = document.querySelector('footer')
+function footBG2(event) {
+    event.target.style.background = 'brown'
+    event.target.style.transition = '0.5s'
+}
+mouseleave.addEventListener('mouseleave', footBG2)
 
 // keydown Listener
 const keydown = document.querySelector('body')
@@ -40,21 +65,12 @@ function regClick(event) {
 }
 click.addEventListener('click', regClick)
 
-
-// resize Listener
-// const resize = document.querySelector('')
-
-
-// scroll Listener
-// const scroll = document.querySelector('')
-
-
-// load Listener
-const load = document.querySelector('body')
-function loadSizes(event) {
-    event.target.style.color = 'yellow'
+// wheel Listener
+const wheel = document.querySelector('img')
+function scrollSize(event) {
+    event.target.style.height = '60vh'
 }
-load.addEventListener('load', loadSizes)
+wheel.addEventListener('wheel', scrollSize)
 
 // dblclick Listener
 const navBG = document.querySelector('.main-navigation')
@@ -64,5 +80,10 @@ function doubleClick(event) {
 }
 navBG.addEventListener('dblclick', doubleClick)
 
-// // drag / drop Listener
-// const dragdrop = document.querySelector('')
+// // select Listener
+const select = document.querySelector('body')
+function bodyBG(event) {
+    event.target.style.background = 'blue'
+    event.target.style.transition = '0.5s'
+}
+select.addEventListener('select', bodyBG)
